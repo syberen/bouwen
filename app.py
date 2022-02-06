@@ -9,6 +9,6 @@ app = Flask(__name__)
 @app.route("/aggregate")
 def aggregate():
     aggregate_service = CBSAggregateService()
-    amount = aggregate_service.get_aggregate()
+    data = aggregate_service.get_aggregate_data()
 
-    return {"amount": amount}
+    return data
