@@ -53,9 +53,9 @@ class CBSAggregateService:
         data = self.fetch_data()["value"]
 
         last_period = data[-1]["Perioden"]
-        build_per_month = [int(record["Nieuwbouw_2"]) for record in data]
+        built_per_month = [int(row["Nieuwbouw_2"]) for row in data]
 
         return {
             "updated_at": self.parse_period(last_period),
-            "amount_built": sum(build_per_month),
+            "amount_built": sum(built_per_month),
         }

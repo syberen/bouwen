@@ -1,4 +1,3 @@
-from calendar import month
 from flask import Flask
 
 from services import CBSAggregateService
